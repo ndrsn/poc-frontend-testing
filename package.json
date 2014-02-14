@@ -20,6 +20,7 @@
     "grunt-express": "~1.2.1",
     "grunt-open": "~0.2.3",
     "grunt-contrib-jade": "~0.10.0",
-    "jade": "~1.1.5"
+    "jade": "~1.1.5",
+    "grunt-contrib-stylus": "~0.12.0"
   }
 }

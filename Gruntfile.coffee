@@ -26,6 +26,17 @@ module.exports = (grunt) ->
 				files:
 					'build/index.html': ['src/templates/index.jade']
 
+		stylus:
+			build:
+				options:
+					paths: ['src/styles/import']
+					import: ['variables.styl']
+				files:
+					'build/style.css':  [
+						'src/styles/**/*.styl'
+						'!src/styles/import/*.styl'
+					]
+
 		browserify:
 			build:
 				src: 'src/coffee/app.coffee'
@@ -46,6 +57,9 @@ module.exports = (grunt) ->
 			index:
 				files: ['src/templates/index.jade']
 				tasks: ['jade:index']
+			styles:
+				files: ['src/styles/**/*.styl']
+				tasks: ['stylus:build']
 
 	grunt.registerTask 'default', ['watch']
 	grunt.registerTask 'build', ['browserify']
