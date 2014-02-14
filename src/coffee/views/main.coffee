@@ -1,5 +1,9 @@
 Backbone = require 'backbone'
 
-class MainView extends Backbone.View
+module.exports = class MainView extends Backbone.View
+	initialize: ->
+		@render()
+
 	render: ->
-		@$el
+		@$el.html '<h1>App Main View</h1>'
+		@$el.append @model.get 'foo'
