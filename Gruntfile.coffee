@@ -21,7 +21,7 @@ module.exports = (grunt) ->
 					namespace: 'templates'
 					node: true
 				files:
-					'src/templates/templates.js': ['src/templates/**/*.jade', '!src/templates/index.jade']
+					'src/templates/.templates.js': ['src/templates/**/*.jade', '!src/templates/index.jade']
 			index:
 				files:
 					'build/index.html': ['src/templates/index.jade']
