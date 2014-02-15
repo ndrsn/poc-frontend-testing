@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -w --compilers coffee:coffee-script --reporter spec tests/unit/*"
   },
   "author": "",
   "license": "BSD-2-Clause",
@@ -21,6 +21,9 @@
     "grunt-open": "~0.2.3",
     "grunt-contrib-jade": "~0.10.0",
     "jade": "~1.1.5",
-    "grunt-contrib-stylus": "~0.12.0"
+    "grunt-contrib-stylus": "~0.12.0",
+    "sinon": "~1.8.2",
+    "mocha": "~1.17.1",
+    "sandboxed-module": "~0.3.0"
   }
 }

@@ -2,6 +2,7 @@ Backbone = require 'backbone'
 
 module.exports = class MainView extends Backbone.View
 	initialize: ->
+		@model.quack()
 		@render()
 
 	render: ->
